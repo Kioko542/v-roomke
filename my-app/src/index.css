@@ -1,0 +1,73 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+body{
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+}
+.show{
+  background-position: center;
+  background-size: cover;
+  
+  background-image: url('./components/images/showcaseimg.jpg');
+}
+.cont-img{
+  background-image: url('./components/images/showcaseimg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#login{
+  background-image: url('./components/images/Login.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -50%;
+}
+ #cont{
+  /* background-image: url('./images/vroom.png'); */
+  z-index: 100;
+  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+ }
+ #hov Link{
+  position: relative;
+ }
+ #hov Link
+ ::before {
+    content: "";
+    position: absolute;
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    height: 2px; 
+    background-color: #007bff; 
+    transform: scaleX(0); 
+    transition: transform 0.3s ease; 
+ }
+ #hov Link::before {
+  transform: scaleX(1); 
+ }
+.show{
+   /* background-image: url('./images/show.jpg');  */
+  height: 100vh;
+  width: full;
+ background-repeat: no-repeat;
+ background-position: center;
+  background-size: cover;
+}
+@media screen and (max-width: 768px) {
+ #btn{
+  display: none;
+ }
+}
+@media (max-width: 480px) {
+  /* Styles for small screens (e.g., mobile phones) */
+  .drop{
+    display: none;
+  }
+}
