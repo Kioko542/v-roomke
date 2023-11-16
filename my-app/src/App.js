@@ -8,28 +8,38 @@ import Services from './components/products';
 import Contact from './components/Contact';
 import Login from './components/Login'; // Import Login
 import ProductList from './components/productList';
+import Showcase from './components/Showcase'
+import Newsletter from './components/Newsletter'
+import Footer from './components/footer'
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // Set the initial login state
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
     <Router>
       <div className="App">
-        
-        <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} /> {/* Pass login state and update function */}
+        <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/cart" element={<Contact />} />
-          <Route path="/" exact component={ProductList} />
-          <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} /> {/* Pass the setIsLoggedIn function */}
+          <Route path="/product-list" element={<ProductList />} />
+          <Route
+            path="/login"
+            element={<Login setIsLoggedIn={setIsLoggedIn} />}
+          />
         </Routes>
+
+        <Showcase />
+        <Newsletter />
+        <ProductList />
+        <Footer />
       </div>
     </Router>
   );
 }
 
 export default App;
-
