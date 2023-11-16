@@ -50,7 +50,7 @@ bash
 
 npm start
 
-Visit http://localhost:3000 in your browser to experience the Vroom E-Commerce App.
+Visit https://kioko542.github.io/v-roomke/ in your browser to experience the Vroom E-Commerce App.
 Customization
 
     Product Data: Add or update product data in the src/data/products.js file.
