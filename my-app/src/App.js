@@ -33,10 +33,10 @@ function App() {
           />
         </Routes>
 
-        <Showcase />
+        {/* <Showcase />
         <Newsletter />
         <ProductList />
-        <Footer />
+        <Footer /> */}
       </div>
     </Router>
   );
