@@ -17,6 +17,7 @@ function App() {
       <div className="App">
         
         <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} /> {/* Pass login state and update function */}
+        <Home />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
