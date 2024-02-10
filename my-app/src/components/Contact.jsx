@@ -1,12 +1,11 @@
-
-import React, { useEffect, useState } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React, { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
 
   const [submitted, setSubmitted] = useState(false);
@@ -26,27 +25,29 @@ const Contact = () => {
 
     // Clear the form after submission
     setFormData({
-      name: '',
-      email: '',
-      message: '',
+      name: "",
+      email: "",
+      message: "",
     });
 
     // Display success message or navigate to a thank-you page
-    alert('Thank you for contacting us!');
+    alert("Thank you for contacting us!");
   };
   useEffect(() => {
     AOS.init({ duration: 2000 });
   }, []);
-    return (
-    <div className="container mx-auto mt-8 grid grid-cols-1 md:grid-cols-2 gap-8"data-aos="fade-right"
-    data-aos-offset="300"
-    data-aos-easing="ease-in-sine">
+  return (
+    <div className="container mx-4 mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 ">
       <div>
         <h1 className="text-3xl font-bold mb-4">Contact Us</h1>
 
-        <div className='cont-img h-full shadow-xl p-[50px] flex justify-center items-center '>
+        <div className="cont-img h-full shadow-xl p-[50px] flex justify-center items-center ">
           <div className="text1">
-            <p className=' text-white bg-black text-center p-4'> <span>Have a question,</span> feedback, or just want to say <span>hello?</span></p>
+            <p className=" text-white bg-black text-center p-4">
+              {" "}
+              <span>Have a question,</span> feedback, or just want to say{" "}
+              <span>hello?</span>
+            </p>
           </div>
         </div>
       </div>
@@ -55,7 +56,10 @@ const Contact = () => {
         <h2 className="text-2xl font-bold mb-4">Send us a message:</h2>
         <form onSubmit={handleSubmit} className="max-w-md">
           <div className="mb-4">
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="name"
+              className="block text-sm font-medium text-gray-700"
+            >
               Your Name
             </label>
             <input
@@ -70,7 +74,10 @@ const Contact = () => {
           </div>
 
           <div className="mb-4">
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="email"
+              className="block text-sm font-medium text-gray-700"
+            >
               Your Email
             </label>
             <input
@@ -85,7 +92,10 @@ const Contact = () => {
           </div>
 
           <div className="mb-4">
-            <label htmlFor="message" className="block text-sm font-medium text-gray-700">
+            <label
+              htmlFor="message"
+              className="block text-sm font-medium text-gray-700"
+            >
               Your Message
             </label>
             <textarea
@@ -105,8 +115,12 @@ const Contact = () => {
           >
             Send Message
           </button>
-          <p className='text-[14px] text-center mt-3'> We'd love to hear from you! Feel free to reach out using the contact information below or use the provided form for a quick and convenient way to get in touch.</p>
-
+          <p className="text-[14px] text-center mt-3">
+            {" "}
+            We'd love to hear from you! Feel free to reach out using the contact
+            information below or use the provided form for a quick and
+            convenient way to get in touch.
+          </p>
         </form>
 
         {submitted && (

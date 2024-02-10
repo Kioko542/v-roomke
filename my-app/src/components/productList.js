@@ -46,7 +46,7 @@ const ProductList = () => {
   return (
     <div  >
       <h2 className="text-4xl  mt-6 mb-4 text-center">Our Products</h2>
-      <div className="grid mx-[100px]  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 rounded-lg shadow-xl" data-aos="fade-left">
+      <div className="grid mx-[100px]  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 rounded-lg shadow-xl ">
         {products.map(product => (
           <ProductCard  key={product.id} product={product} />
         ))}

@@ -34,7 +34,7 @@ const AboutPage = () => {
           </div>
         </div>
 
-        <div className="choose-us flex flex-wrap gap-5 mt-[150px]" data-aos="zoom-out-right" data-aos-anchor-placement="top-bottom" data-aos-delay="300">
+        <div className="choose-us flex flex-wrap gap-5 mt-[150px]">
           <img src={chooseUsImage} alt="Why Choose Us" className="mb-4 rounded-md shadow-md w-full h-[50vh] object-cover" />
           <div className="con3">
             <h2 className="text-2xl font-bold mb-4">Why Choose Us?</h2>
